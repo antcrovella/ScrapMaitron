@@ -6,7 +6,8 @@ def noticesMaitron(lienPage, nbPage, mode=1):
     import urllib.request as urlReq
     from bs4 import BeautifulSoup as bs
     import re
-    chemin = "/users/antoinecrovella/Documents/Programmation/Projet/NoticesSiteMaitron.txt"
+    import datetime;
+    chemin = f"/users/antoinecrovella/Documents/Programmation/Projet/NoticesSiteMaitron{datetime.datetime.now()}.txt"
     contenuFichierSortie = "Ensemble des notices du Maitron où il est fait mention des termes 'section speciale'\n\n\n"
     i = 0
     y = 0
