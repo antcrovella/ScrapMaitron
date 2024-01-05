@@ -18,7 +18,7 @@ def noticesMaitron(lienPage, nbPage, mode=1):
     # Renvoi de l'avancement
     print(f"Début du scrapping")
 
-    while y <= nbPage :
+    while y < nbPage :
 
         # Renvoi de l'avancement
         print(f"\n Page n°{y+1} en traitement\n")
@@ -71,7 +71,7 @@ def noticesMaitron(lienPage, nbPage, mode=1):
                             texteNotice = texteNotice + texteBalise
                     contenuFichierSortie = contenuFichierSortie + f"{i}. {titre}\n\nTexte intro : {intro}\n\nParagraphe(s) où la mention 'section spéciale' apparaît : \n{texteNotice}\n\nLien notice : {lien}\n\n\n"
 
-                # Ecriture de la notice dans le cas du choix du mode "complet"
+                # Écriture de la notice dans le cas du choix du mode "complet"
                 if mode == 3:
                     for chaqueBalise in findBalisesNotice():
                         texteBalise = chaqueBalise.text
@@ -91,10 +91,12 @@ def noticesMaitron(lienPage, nbPage, mode=1):
         soupe = bs(source, features="html.parser")
         pagination = soupe.find("p", class_="pagination-resultats")
         liensPagination = pagination.findAll("a")
-        lienNouvellePage = liensPagination[-2]
-        nouveauLien = lienNouvellePage["href"]
-        lienPage = "https://maitron.fr" + nouveauLien
-        y = y + 1
+        for chaqueLien in liensPagination:
+            texteLien = chaqueLien.text
+            if re.findall("suivant", texteLien):
+                nouveauLien = chaqueLien["href"]
+                lienPage = "https://maitron.fr" + nouveauLien
+                y = y + 1
 
     # Écriture du fichier
     fichier = open(chemin, "w+")
