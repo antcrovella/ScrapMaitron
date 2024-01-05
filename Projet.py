@@ -1,36 +1,41 @@
 # Premier lien utilisé = "https://maitron.fr/spip.php?page=recherche_avanc&swishe_type1=phrase1&swishe_from1=full1&swishe_exp1=section+speciale&multi1=et1&swishe_type2=phrase2&swishe_from2=full2&swishe_exp2=&multi2=et2&swishe_type3=phrase3&swishe_from3=full3&swishe_exp3=&swishe_option=tout&typetri=triA&swishe_mot_op_periode=or&swishe_mot%5B0%5D=periode.26&swishe_mot%5B1%5D=periode.3&swishe_mot_op_dico=or&swishe_mot_op_pro=or&swishe_mot_op_dep=or&swishe_mot_op_int=or&OK=Envoyer&swishe_depart=0&swishe_nbParPage=15"
-# Définition du premier lien utilisé issu d'une recherche avancée précisant les variables recherchées (ici toutes les notices où "section speciale" apparaît)
 
 
+# Creation de la fonction
 def noticesMaitron(lienPage, nbPage, mode=1):
+    # Importation des bibliothèques utilisées
     import urllib.request as urlReq
     from bs4 import BeautifulSoup as bs
     import re
-    import datetime;
+    import datetime
+
+    # Définition des variables générales de la fonction
     chemin = f"/users/antoinecrovella/Documents/Programmation/Projet/NoticesSiteMaitron{datetime.datetime.now()}.txt"
     contenuFichierSortie = "Ensemble des notices du Maitron où il est fait mention des termes 'section speciale'\n\n\n"
     i = 0
     y = 0
-    print(f"Début du scrapping")
-
-    while y < nbPage:
 
     # Renvoi de l'avancement
+    print(f"Début du scrapping")
+
+    while y <= nbPage :
+
+        # Renvoi de l'avancement
         print(f"\n Page n°{y+1} en traitement\n")
 
-    # Lecture de la page de recherche
+        # Lecture de la page de recherche
         page = urlReq.urlopen(lienPage)
         source = page.read()
         soupe = bs(source, features="html.parser")
 
-    # Récupération les liens des articles présents sur la page de recherche
+        # Récupération les liens des articles présents sur la page de recherche
         resultatRecherche = soupe.find("div", class_="resultats-recherche")
         elementsListe = resultatRecherche.findAll("li")
 
         def findBalisesNotice():
             return soupe.find("div", class_="notice-texte entry").findAll("p")
 
-    # Récupération des informations de chaque notices
+        # Récupération des informations de chaque notices
         for chaqueElementListe in elementsListe:
             lien = chaqueElementListe.a["href"]
 
@@ -91,7 +96,7 @@ def noticesMaitron(lienPage, nbPage, mode=1):
         lienPage = "https://maitron.fr" + nouveauLien
         y = y + 1
 
-    # Ecriture du fichier
+    # Écriture du fichier
     fichier = open(chemin, "w+")
     fichier.write(contenuFichierSortie)
     fichier.close()
@@ -100,10 +105,11 @@ def noticesMaitron(lienPage, nbPage, mode=1):
     print(f"\n Scrapping terminé, {y} pages ont été importées \n")
 
 
+# Appel de la fonction pour une utilisation par l'utilisateur
 lienPage = input("Quel lien souhaitez-vous utiliser ? : \n")
 nbPage = int(input("Quel nombre de pages souhaitez-vous scrapper ? : \n"))
-print("1. Mode simplifié \n ")
-print("2. Mode paragraphe \n ")
+print("1. Mode simplifié")
+print("2. Mode paragraphe")
 print("3. Mode complet \n ")
-mode = int(input("Choisissez votre mode : \n"))
+mode = int(input("Quel mode souhaitez-vous utiliser ? : \n"))
 noticesMaitron(lienPage, nbPage, mode)
