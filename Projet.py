@@ -10,7 +10,7 @@ def noticesMaitron(lienPage, nbPage, mode=1):
     import datetime
 
     # Définition des variables générales de la fonction
-    chemin = f"/users/antoinecrovella/Documents/Programmation/Projet/NoticesSiteMaitron{datetime.datetime.now()}.txt"
+    chemin = f"/users/antoinecrovella/Documents/Master/Outils de la recherche/M2/Programmation/Projet/NoticesSiteMaitron{datetime.datetime.now()}.txt"
     contenuFichierSortie = (f"Ensemble des notices du Maitron où il est fait mention des termes 'section speciale'\nLien de recherche utilisé pour le scrapping : {lienPage}\n\n\n")
     i = 0
     y = 0
