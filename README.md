@@ -8,9 +8,9 @@ Attention : ne pas confondre les notices (fiches propres à chaque individu) et 
 
 ## Présentation du code
 
-### Variables générales
+### Variables générales et arguments définis par l'utilisateur
 
-Le code est composé d'une fonction principale, "noticesMaitron", appelée dans le programme. Celle-ci prend trois variables : \
+Le code est composé d'une fonction principale, "noticesMaitron", appelée dans le programme. Celle-ci prend trois arguments : \
 lienPage, soit le lien de la page de résultat où se trouvent les notices à scrapper. \
 nbPage, soit le nombre de pages à télécharger depuis cette page de résultat. \
 mode, soit le mode utilisé pour le téléchargement, celui-ci est, sans autres indications, automatiquement sur "1".
@@ -24,7 +24,7 @@ Nous définissons ensuite une nouvelle fonction, findBalisesNotice. Utilisée à
 
 ### Boucle while
 
-Pour faire fonctionner notre programme, nous utilisons une boucle while. Celle-ci s'exécute tant que la valeur du compteur y (dont la valeur augmente à chaque itération) est inférieure à la valeur de la variable nbPage, définie par l'utilisateur. Cette condition permet de scrapper le nombre de pages demandées par l'utilisateur, le programme s'arrêtant une fois que cette valeur a été atteinte.
+Pour faire fonctionner notre programme, nous utilisons une boucle while. Celle-ci s'exécute tant que la valeur du compteur y (dont la valeur augmente à chaque itération) est inférieure à la valeur de l'argument nbPage, définie par l'utilisateur. Cette condition permet de scrapper le nombre de pages demandées par l'utilisateur, le programme s'arrêtant une fois que cette valeur a été atteinte.
 
 Le programme lit la page de recherche (variable page) et récupère, pour chacune des notices présentes sur celle-ci, la balise "li" contenant le lien de chaque notice.
 
@@ -59,7 +59,7 @@ Une fois la boucle while achevée, le programme écrit l'ensemble des données r
 
 ### Appel de la fonction
 
-L'appel de la fonction permet à l'utilisateur de définir les variables présentées dans la sous-partie "variables générales". 
+L'appel de la fonction permet à l'utilisateur de définir les arguments présentées dans la sous-partie "variables générales". 
 
 ## Utilisation
 
