@@ -40,7 +40,7 @@ Le chapeau introducteur (variable intro).
 
 #### fonction if et modes d'utilisation
 
-À l'aide de la fonction if, le programme, selon le choix de l'utilisateur, ne télécharge pas la même chose de la notice. \
+À l'aide de la fonction if, le programme, selon le choix de l'utilisateur, ne télécharge pas la même chose de la notice :
 1. Dans le cas du mode numéro 1, le programme ne va inscrire sur le fichier .txt que le titre, l'introduction et le lien de la notice.
 2. Dans le cas du mode numéro 2, le programme inscrit les mêmes données que le mode numéro 1 en y rajoutant les paragraphes du corps du texte de la notice où l'ensemble "section spéciale" apparaît. À l'aide d'une boucle et grâce aux expréssions régulières, le programme lit chacun des textes présents dans les balises "p" (fonction findBalisesNotice définie au début du programme) et ne garde dans le fichier .txt que ceux où l'ensemble section spéciale apparaît. Que cet ensemble soit écrit avec ou sans majuscules et accents. 
 3. Dans le cas du mode numéro 3, le programme inscrit l'ensemble de la notice dans le fichier .txt soit le titre, l'introduction, le lien et l'ensemble des paragraphes de la notice, même s'ils ne contiennent pas tous l'ensemble "section spéciale".
