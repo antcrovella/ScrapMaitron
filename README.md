@@ -4,7 +4,7 @@ Le but du programme est de récupérer automatiquement un ensemble de fiches iss
 
 Attention : ne pas confondre les notices (fiches propres à chaque individu) et les pages (une page contient au maximum 15 notices, elle est obtenue après une recherche)
 
-![Capture d’écran 2024-01-17 à 10.14.21.png](..%2F..%2FDocuments%2FTravail%2FMaster%2FOutils%20de%20la%20recherche%2FM2%2FProgrammation%2FProjet%2FCapture%20d%E2%80%99%C3%A9cran%202024-01-17%20%C3%A0%2010.14.21.png)
+![ImageSiteMaitron](https://github.com/antcrovella/ScrapMaitron/assets/155578364/676be6bd-9e11-49e3-b323-7943f4bdb0c5)
 
 ## Présentation du code
 
@@ -38,7 +38,7 @@ La page contenant la notice va être lue, et vont y être extrait, à chaque it�
 Le titre de la notice (variable titre). \
 Le chapeau introducteur (variable intro). \
 
-#### fonction if et modes d'utilisation
+#### Fonction if et modes d'utilisation
 
 À l'aide de la fonction if, le programme, selon le choix de l'utilisateur, ne télécharge pas la même chose de la notice. \
 1. Dans le cas du mode numéro 1, le programme ne va inscrire sur le fichier .txt que le titre, l'introduction et le lien de la notice.
@@ -63,4 +63,5 @@ L'appel de la fonction permet à l'utilisateur de définir les variables présen
 
 ## Utilisation
 
-Pour utiliser ce programme il faut vous rendre sur le site du maitron (https://maitron.fr) et effectuer une recherche ou une recherche avancée (dans notre cas la recherche effectuée cherche toutes les notices où "section spéciale" et "Paris" apparaissent dans la notice, le résultat de cette recherche nous donne le lien suivant : https://maitron.fr/spip.php?page=recherche_avanc&swishe_type1=phrase1&swishe_from1=full1&swishe_exp1=section+speciale&multi1=et1&swishe_type2=phrase2&swishe_from2=full2&swishe_exp2=Paris&multi2=et2&swishe_type3=phrase3&swishe_from3=full3&swishe_exp3=&swishe_option=tout&typetri=triA&swishe_mot_op_periode=or&swishe_mot%5B%5D=periode.26&swishe_mot%5B%5D=periode.3&swishe_mot_op_dico=or&swishe_mot_op_pro=or&swishe_mot_op_dep=or&swishe_mot_op_int=or&OK=Envoyer. Une fois obtenu le premier lien de la page de recherche, il vous suffit de choisir le nombre de pages que vous souhaitez télécharger et le mode d'utilisation. 
+Pour utiliser ce programme il faut vous rendre sur le site du maitron (https://maitron.fr) et effectuer une recherche ou une recherche avancée (dans notre cas la recherche effectuée cherche toutes les notices où "section spéciale" et "Paris" apparaissent dans la notice, le résultat de cette recherche nous donne le lien suivant : https://maitron.fr/spip.php?page=recherche_avanc&swishe_type1=phrase1&swishe_from1=full1&swishe_exp1=section+speciale&multi1=et1&swishe_type2=phrase2&swishe_from2=full2&swishe_exp2=Paris&multi2=et2&swishe_type3=phrase3&swishe_from3=full3&swishe_exp3=&swishe_option=tout&typetri=triA&swishe_mot_op_periode=or&swishe_mot%5B%5D=periode.26&swishe_mot%5B%5D=periode.3&swishe_mot_op_dico=or&swishe_mot_op_pro=or&swishe_mot_op_dep=or&swishe_mot_op_int=or&OK=Envoyer. Une fois obtenu le premier lien de la page de recherche, il vous suffit de choisir le nombre de pages que vous souhaitez télécharger et le mode d'utilisation.
+Un exemple des résultats obtenus pour chaque mode est consultable dans le dossier résultat requête. 
