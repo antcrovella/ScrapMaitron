@@ -4,7 +4,7 @@ Le but du programme est de récupérer automatiquement un ensemble de fiches iss
 
 Attention : ne pas confondre les notices (fiches propres à chaque individu) et les pages (une page contient au maximum 15 notices, elle est obtenue après une recherche)
 
-![Capture d’écran 2024-01-17 à 10.14.21.png](..%2F..%2FDocuments%2FTravail%2FMaster%2FOutils%20de%20la%20recherche%2FM2%2FProgrammation%2FProjet%2FCapture%20d%E2%80%99%C3%A9cran%202024-01-17%20%C3%A0%2010.14.21.png)
+![ImageSiteMaitron](https://github.com/antcrovella/ScrapMaitron/assets/155578364/676be6bd-9e11-49e3-b323-7943f4bdb0c5)
 
 ## Présentation du code
 
