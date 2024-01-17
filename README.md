@@ -36,7 +36,7 @@ Le programme lit la page de recherche (variable page) et récupère, pour chacun
 
 La page contenant la notice va être lue, et vont y être extrait, à chaque itération, les éléments suivants : \
 Le titre de la notice (variable titre). \
-Le chapeau introducteur (variable intro). \
+Le chapeau introducteur (variable intro).
 
 #### fonction if et modes d'utilisation
 
