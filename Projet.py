@@ -86,7 +86,7 @@ def noticesMaitron(lienPage, nbPage, mode=1):
                 contenuFichierSortie = contenuFichierSortie + f"La fiche n°{i} de la page {y} n'a pas pu être téléchargée, le lien suivant n'a pas fonctionné : {lien}\n\n"
                 continue
 
-    # Passage à la page de recherche suivant
+    # Passage à la page de recherche suivante
         page = urlReq.urlopen(lienPage)
         source = page.read()
         soupe = bs(source, features="html.parser")
@@ -107,7 +107,7 @@ def noticesMaitron(lienPage, nbPage, mode=1):
     print(f"\n Scrapping terminé, {y} pages ont été importées \n")
 
 
-# Appel de la fonction pour une utilisation par l'utilisateur
+# Appel de la fonction
 lienPage = input("Quel lien souhaitez-vous utiliser ? : \n")
 nbPage = int(input("Quel nombre de pages souhaitez-vous scrapper ? : \n"))
 print("1. Mode simplifié")
