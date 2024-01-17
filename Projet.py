@@ -64,7 +64,6 @@ def noticesMaitron(lienPage, nbPage, mode=1):
                 if mode == 1:
                     contenuFichierSortie = contenuFichierSortie + f"{i}. {titre}\n\nTexte intro : {intro}\n\nLien notice : {lien}\n\n\n"
 
-
                 # Ecriture des paragraphes où apparaissent l'ensemble de mots "section spéciale" dans le cas du choix du mode "paragraphe"
                 if mode == 2:
                     for chaqueBalise in findBalisesNotice():
